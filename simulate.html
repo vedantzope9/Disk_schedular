@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="ds1.png" type="image/ds1">
+  <link rel="shortcut icon" href="ds1.png" type="image/ds1">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulator</title>
+
+  <link rel="stylesheet" type="text/css" href="stimuStyle.css">
+
+  <!-- JAVASCRIPT LINKS -->
+  <script type="text/javascript" src="JS/FCFS.js"></script>
+  <script type="text/javascript" src="JS/SSTF.js"></script>
+  <script type="text/javascript" src="JS/LOOK.js"></script>
+  <script type="text/javascript" src="JS/SCAN.js"></script>
+  <script type="text/javascript" src="JS/CLOOK.js"></script>
+  <script type="text/javascript" src="JS/CSCAN.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="JS/renderchart.js"></script>
+<!-- JAVASCRIPT LINKS -->
+  <script>      
+    function disableDropdown(){
+        if(drop.algo.options[4].selected || drop.algo.options[5].selected){
+            drop.dir.disabled = true;
+        }
+        else{
+            drop.dir.disabled = false;
+        }
+    }  
+    function gettrackno(){
+        var trackno = document.querySelector('.track-sequence').value;
+        var ctrack = document.querySelector('.current-track').value;
+        var alg = document.querySelector(".algorithm-dropdown").value;
+
+        
+        document.querySelector(".track-number").innerHTML ='Your Track Numbers are:' + trackno;
+           
+        document.querySelector(".current").innerHTML ='Your Current Track Position is: ' + ctrack;
+
+        document.querySelector(".algo").innerHTML = 'Algorithm: ' + alg
+
+        if(alg === "FCFS"){
+            fcfs();
+        }
+        else if(alg === "SSTF"){
+            sstf();
+        }
+        else if(alg === "SCAN"){
+            scan();
+        }
+        else if(alg === "CSCAN"){;
+            cscan();
+        }
+        else if(alg === "LOOK"){
+            look();
+        }
+        else if(alg === "CLOOK"){
+            clook();
+        }
+
+        return false;
+        }
+
+        var subButton = document.getElementById('addbtn');
+        subButton.addEventListener('click', gettrackno, false); 
+        
+
+</script>
+</head>
+
+<body bgcolor=#6BA6F4>
+  <header>
+    <div class="header-content">
+
+      <div class="header-left">
+        <img src="ds1.png" height="50" /> &nbsp;&nbsp;
+        <h1 class="header-title">Disk Scheduler</h1>
+      </div>
+
+      <div class="header-right">
+        <a href="index.html" class="header-link">
+          <font size="6" style="font-family: 'Times New Roman', Times, serif;">Home</font>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="algo.html" class="header-link">
+          <font size="6" style="font-family: 'Times New Roman', Times, serif;">Algorithms</font>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about.html" class="header-link">
+          <font size="6" style="font-family: 'Times New Roman', Times, serif;"> About me</font>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+
+    </div>
+  </header>
+
+  <section class="simulator-section flex-direction">
+    <div class="disk-scheduling">
+      <div class="disk-scheduling-heading">Disk Scheduling</div>
+      <div class="form">
+        <form onsubmit="return gettrackno();" ID="drop">
+          <br><br>
+          <label>Current Track Position</label>
+          <input type="text" class="current-track" id="css" placeholder="50"><br>
+          <label>Track Number</label><br>
+          <input type="text" class="track-sequence" placeholder="80 68 59 100 120"><br>
+         <label>Algorithm</label><br>
+          <select class="algorithm-dropdown" ID="algo" onchange="disableDropdown()">
+            <option value="SCAN">SCAN</option>
+            <option value="CSCAN">CSCAN</option>
+            <option value="LOOK">LOOK</option>
+            <option value="CLOOK">CLOOK</option>
+            <option value="FCFS">FCFS</option>
+            <option value="SSTF">SSTF</option>
+          </select><br><br>
+       <label>Direction</label><br>
+          <select class="direction-dropdown" ID="dir">
+            <option value="left">LEFT</option>
+            <option value="right">RIGHT</option>
+          </select>
+          <br><br>
+        <center>
+          <button type="submit" value="Simulate" class="btn" id="addbtn">Simulate</button>
+        </center>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="output">
+      <div class="output-heading">Output</div>
+      <div class="results">
+        <div class="track-number">Your Track Numbers are:</div>
+        <div class="current">Your Current Track Position is: </div>
+        <div class="algo">Algorithm: </div>
+        <div class="order">Order of Execution: </div>
+        <div class="time">Total Seek Time: </div><br>
+        <div> Graph: </div>
+        <div id="chartContainer" style="width: auto; height: 200px; margin-top: 50px;"></div>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+
+</html>

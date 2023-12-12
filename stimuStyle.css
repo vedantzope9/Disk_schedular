@@ -1,0 +1,177 @@
+header {
+    background-color: hsl(242, 76%, 21%);
+    color: white; 
+    padding: 30px; 
+    top: 0;  
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+}
+.header-content {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+}
+.header-title {
+    font-family: 'Imprint MT Shadow';
+    font-size: 45px;    
+    margin: 0;
+}
+
+.header-link {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-decoration: none; 
+    color: white;
+    
+}
+.header-link:hover {
+    color: #1ceb09;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: hsl(242, 76%, 21%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+
+html,body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.simulator-section{
+    display: inline-flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-right: 50px;
+    width: 100vw;
+}
+.flex-direction{
+    flex-direction: row;
+}
+
+@media (max-width: 1500px) {
+    .flex-direction{
+        flex-direction: row;
+    }
+    .simulator-section{
+        width: auto;
+        justify-content: center;
+    }
+    
+}
+
+.disk-scheduling{
+    margin-left: 60px; 
+    float: left;
+}
+.simulator-section .disk-scheduling .disk-scheduling-heading{
+    
+    color: white;
+    background-color: #b04335;
+    padding: 1rem 8rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+label{
+    color: white;
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 550;
+}
+
+.simulator-section .disk-scheduling .form{
+    display: flex;
+    background-color: #066df5;
+    border-radius: .5rem;
+    padding: 1.5rem ;   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+.simulator-section .disk-scheduling .form .btn{
+    background-color: darkgreen;
+    color: white;
+    padding: 15px 30px;
+    font-size: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.simulator-section .disk-scheduling .form .btn:hover{
+    background-color: rgb(250, 52, 17);
+}
+.simulator-section .disk-scheduling .form .current-track, .track-sequence{
+    display: flex;
+    border-radius: 0.9rem;
+    border-color: transparent;
+    padding: 0.5rem 2rem;
+    margin-left: 0.25rem;
+    margin: 2rem;
+}
+
+.simulator-section .disk-scheduling .form .algorithm-dropdown{
+    padding: 0.5rem 5.4rem;
+    margin-left: 0.25rem;
+    margin: 2rem;
+    border-radius: 0.9rem;
+    background-color: white;
+    border-color: transparent;
+}
+.simulator-section .disk-scheduling .form .direction-dropdown{
+    padding: 0.5rem 5.4rem;
+    margin-left: 0.25rem;
+    margin: 2rem;
+    border-radius: 0.9rem;
+    background-color: white;
+    border-color: transparent;
+}
+.simulator-section .disk-scheduling .form .algorithm-dropdown:hover{
+    background-color: #e6e6e6;
+}
+.simulator-section .disk-scheduling .form .direction-dropdown:hover{
+    background-color: white;
+}
+
+/* OUTPUT STYLES */
+.output{
+    margin-right: 10px;
+    float: right;
+    margin-left: 120px;
+}
+.simulator-section .output .output-heading{
+    min-width: 0;
+    color: white;
+    background-color: #67ee3e;
+    padding: 1rem 17rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+.simulator-section .output .results{
+    background-color: #066df5;
+    border-radius: 0.9rem;
+    padding: 2rem;
+    min-height: 670px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}

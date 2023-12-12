@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="icon" href="ds1.png" type="image/ds1">
+  <link rel="shortcut icon" href="ds1.png" type="image/ds1">
+  
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Disk_Scheduler</title>
+
+  <script>
+    function openSimulatorPage() {
+        window.location.href = "simulate.html"; 
+    }
+</script>
+<!link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+
+<body bgcolor= #6BA6F4>
+  <header>
+    <div class="header-content">
+
+      <div class="header-left">
+        <img src="ds1.png" height="50" /> &nbsp;&nbsp;
+        <h1 class="header-title">Disk Scheduler</h1>
+      </div>
+
+      <div class="header-right">
+        <a href="algo.html" class="header-link"><font size="6" style="font-family: 'Times New Roman', Times, serif;">Algorithms</font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about.html" class="header-link"><font size="6" style="font-family: 'Times New Roman', Times, serif;"> About me</font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+
+    </div>
+  </header>
+
+  <section class="main-content">
+    <div class="content-container">
+      <div class="content-left">
+        <img src="disk.png" />
+      </div>
+
+      <div class="content-right">
+        <font size="10" color="white">Quick Description</font><br><br>
+        <br><font color="#36454F" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" ; size="5">
+          Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. <br>
+          Disk scheduling is also known as I/O scheduling.<br>
+          Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by
+          the disk controller.<br>
+          Thus other I/O requests need to wait in the waiting queue and need to be scheduled.<br>
+          Two or more request may be far from each other so can result in greater disk arm movement. <br>
+          Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient
+          manner. <br>
+
+        </font>
+        <br><br>
+        <button class="button" onclick="openSimulatorPage()">Simulator</button>
+      </div>
+    
+    </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

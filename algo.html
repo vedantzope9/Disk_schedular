@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  
+  <link rel="icon" href="ds1.png" type="image/ds1">
+  <link rel="shortcut icon" href="ds1.png" type="image/ds1">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Algorithms</title>
+</head>
+
+<body bgcolor= #6BA6F4>
+  <header>
+    <div class="header-content">
+
+      <div class="header-left">
+        <img src="ds1.png" height="50" /> &nbsp;&nbsp;
+        <h1 class="header-title">Disk Scheduler</h1>
+      </div>
+
+      <div class="header-right">
+        <a href="index.html" class="header-link"><font size="6" style="font-family: 'Times New Roman', Times, serif;">Home</font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="simulate.html" class="header-link"><font size="6" style="font-family: 'Times New Roman', Times, serif;">Simulator</font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="about.html" class="header-link"><font size="6" style="font-family: 'Times New Roman', Times, serif;"> About me</font></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+
+    </div>
+  </header>
+  <br><br>
+  <center>
+  <font color="#454545" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" ; align="center" size="25"><u>BRIEF ABOUT ALL ALGORITHMS IMPLEMENTED<br>IN PROJECT</u> </font>
+</center>
+<br><br><br>&nbsp;&nbsp;
+<ul>
+<font color="white" size="6">First Come First Serve (FCFS)</font><br><br>
+<font size="5 ">FCFS (First-Come-First-Serve) is the easiest disk scheduling algorithm among all the scheduling algorithms. In the FCFS disk scheduling algorithm, each input/output request is served in the order in which the requests arrive.In this algorithm, starvation does not occur because FCFS address each request.</font>
+<br><br><br>
+<font color="white" size="6">Shortest Seek Time First (SSTF)</font><br><br>
+<font size="5 ">SSTF is another type of scheduling algorithm. In this type of disk scheduling, the job which has less seek time will be executed first. So, in SSTF (shortest seek time first) scheduling, we have to calculate the seek time first. After calculating the seek time, each request will be served on the basis of seek time. The request which is close to the disk arm will be first executed. There are some drawbacks in FCFS. To overcome the limitations that arise in the FCFS. SSTF scheduling is implemented.</font>
+<br><br><br>
+<font color="white" size="6">LOOK</font><br><br>
+<font size="5 ">Look disk scheduling is another type of disk scheduling algorithm. Look scheduling is an enhanced version of SCAN disk scheduling. Look disk scheduling is the same as SCAN disk scheduling, but in this scheduling, instead of going till the last track, we go till the last request and then change the direction.</font>
+<br><br><br>
+<font color="white" size="6">CIRCULAR-LOOK</font><br><br>
+<font size="5 ">C-look means circular-look. It takes the advantages of both the disk scheduling C-SCAN, and Look disk scheduling. In C-look scheduling, the disk arm moves and service each request till the head reaches its highest request, and after that, the disk arm jumps to the lowest cylinder without servicing any request, and the disk arm moves further and service those requests which are remaining.</font>
+<br><br><br>
+<font color="white" size="6">SCAN</font><br><br>
+<font size="5 ">The SCAN disk scheduling algorithm is another type of disk scheduling algorithm. In this algorithm, we move the disk arm into a specific direction (direction can be moved towards large value or the smallest value). Each request is addressed that comes in its path, and when it comes into the end of the disk, then the disk arm will move reverse, and all the requests are addressed that are arriving in its path. Scan disk scheduling algorithm is also called an elevator algorithm because its working is like an elevator.</font>
+<br><br><br>
+<font color="white" size="6">CIRCULAR-SCAN</font><br><br>
+<font size="5 ">C-SCAN stands for Circular-SCAN. C-SCAN is an enhanced version of SCAN disk scheduling. In the C-SCAN disk scheduling algorithm, the disk head starts to move at one end of the disk and moves towards the other end and service the requests that come in its path and reach another end. After doing this, the direction of the head is reversed. The head reaches the first end without satisfying any request and then it goes back and services the requests which are remaining.</font>
+<br><br><br>
+</ul>
+</body>
+  </html>
+  
