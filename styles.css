@@ -78,3 +78,6 @@ body {
 .button:hover{
     background-color: rgb(250, 52, 17);
 }
+.button:active{
+    opacity: 0.5;
+}
